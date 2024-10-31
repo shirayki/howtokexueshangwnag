@@ -1,0 +1,1554 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: "Iosevka Curly", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --file-tree-text-size: 1.1rem; /*文件树大小*/
+    --toc-text-size: 1rem; /*大纲大小*/
+    --text-size: 14px; /*字体大小 推荐配置: 应用设置-外观-字体大小*/
+}/*
+ * MIT License
+ *
+ * Copyright (c) 2023 劉強東 https://github.com/liangjingkanji
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+@import url();
+@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-color: #b3bec4;
+    --bg-color: #212121;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #323232;
+    --active-file-bg-color: var(--item-hover-bg-color);
+    --mermaid-theme: night;
+
+    --blur-text-color: rgba(179, 190, 196, 0.5);
+    --md-char-color: #535455;
+    --side-bar-bg-color: var(--bg-color);
+    --search-select-bg-color: #ffffff;
+    --search-select-text-color: var(--bg-color);
+    --select-text-bg-color: #3473B068;
+    --window-border: 1px solid #282828;
+
+    --drake-accent: #ff9800;
+    --drake-highlight: #ff9800;
+    --a-color: var(--drake-highlight);
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #1b1b1b;
+    --code-block-color: var(--text-color);
+    --title-color: #bbc6d2;
+    --blockquote-border-color: var(--drake-accent);
+    --blockquote-color: var(--text-color);
+    --blockquote-bg-color: rgba(255, 185, 82, 0.05);
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #676773;
+    --yaml-bg-color: var(--code-block-bg-color);
+    --footnotes-bg-color: var(--item-hover-bg-color);
+    --footnotes-highlight: #FFD760;
+    --table-border-color: var(--item-hover-bg-color);
+    --table-header-bg-color: #292929;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--table-header-bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23acb7c4'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--text-line-height);
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+    line-height: var(--code-line-height);
+}
+
+/*inline latex*/
+.MathJax {
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
+}
+/*math-block latex*/
+.md-math-block .MathJax {
+    font-size: 130% !important;
+}
+
+/*mermaid*/
+[id^=mermaidChart] .cluster rect {
+    fill: var(--table-n2-bg-color) !important;
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] .grid .tick text,
+[id^=mermaidChart] .titleText {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] .clusters span.nodeLabel {
+    color: var(--text-color) !important;
+    line-height: 1.8rem;
+}
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
+[id^=mermaidChart] {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] rect.rect {
+    fill: rgba(175, 255, 212, 0.3) !important;
+}
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: #e6e6e6 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color) !important;
+    background: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color);
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    color: var(--drake-highlight);
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write h2 a .md-plain {
+    border-bottom: .2rem solid var(--a-color);
+}
+.on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p, blockquote, ul, ol, dl, table {
+    margin: var(--p-spacing) 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+li {
+    margin: 0.5em 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-family: var(--text-font) !important;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*export background*/
+.export-detail,
+.export-item.active,
+.export-items-list-control {
+    background: var(--active-file-bg-color) !important;
+}
+
+/*source code mode*/
+.cm-s-typora-default .CodeMirror-activeline-background,
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: var(--active-file-bg-color);
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-library-node.file-tree-node.file-node-root {
+    font-size: var(--file-tree-text-size);
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.file-node-content {
+    display: flex;
+    align-items: center;
+}
+.file-node-open-state {
+    margin-right: .5rem;
+}
+.file-node-icon {
+    margin-right: .5rem;
+}
+
+#typora-sidebar {
+    font-size: inherit;
+    font-family: var(--title-font);
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: var(--toc-text-size);
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+.task-list-item p {
+    line-height: 1.6rem;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/*
+  Name:       material
+  Author:     Mattia Astorino (http://github.com/equinusocio)
+  Website:    https://material-theme.site/
+*/
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: none;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    background: #212121;
+    color: #545454;
+}
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner .CodeMirror-linenumber {
+    color: #545454;
+}
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::selection {
+    background: rgba(128, 203, 196, 0.2);
+}
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background: rgba(128, 203, 196, 0.2);
+}
+.cm-s-inner .cm-keyword {
+    color: #C792EA;
+}
+.cm-s-inner .cm-operator {
+    color: #89DDFF;
+}
+.cm-s-inner .cm-variable-2 {
+    color: var(--code-block-color);
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #f07178;
+}
+.cm-s-inner .cm-builtin {
+    color: #FFCB6B;
+}
+.cm-s-inner .cm-atom {
+    color: #F78C6C;
+}
+.cm-s-inner .cm-number {
+    color: #FF5370;
+}
+.cm-s-inner .cm-def {
+    color: #82AAFF;
+}
+.cm-s-inner .cm-string {
+    color: #C3E88D;
+}
+.cm-s-inner .cm-string-2 {
+    color: #f07178;
+}
+.cm-s-inner .cm-comment {
+    color: #787878;
+}
+.cm-s-inner .cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner .cm-tag {
+    color: #FF5370;
+}
+.cm-s-inner .cm-meta {
+    color: #FFCB6B;
+}
+.cm-s-inner .cm-attribute {
+    color: #C792EA;
+}
+.cm-s-inner .cm-property {
+    color: #C792EA;
+}
+.cm-s-inner .cm-qualifier {
+    color: #DECB6B;
+}
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type {
+    color: #DECB6B;
+}
+.cm-s-inner .cm-error {
+    color: #FF5370;
+}
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+.cm-s-inner .CodeMirror-selected {
+    background: #214283 !important;
+}
+.cm-s-inner .CodeMirror-selectedtext {
+    background: #214283 !important;
+}
+.cm-s-typora-default .CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-overlay.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color) !important;
+}
+.cm-s-inner div.CodeMirror-cursor {
+    border-left: 1px solid var(--code-block-color);
+}
+.cm-s-inner .cm-header, .cm-s-inner.cm-header {
+    color: #FFD760;
+    font-weight: normal;
+}
+
+
+</style><title>如何使用v2ray软件进行科学上网</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='如何使用v2ray软件进行科学上网'><span>如何使用v2ray软件进行科学上网</span></h1><p><span>标签: 科学上网</span>
+<span>上次编辑时间: 2024年10月18日 17:54</span>
+<span>内容: 科学上网工具使用教程</span>
+<span>创建者: cupe</span></p><h2 id='一下载软件v2ray'><span>一、下载软件V2ray</span></h2><h3 id='电脑安装包点击下载'><span>电脑安装包（点击下载）</span></h3><p><a href='v2rayN-With-Core.zip'><span>v2rayN-With-Core.zip</span></a></p><h3 id='安卓手机安装包点击下载'><span>安卓手机安装包（点击下载）</span></h3><p><a href='v2rayNG_1.9.3_arm64-v8a.zip'><span>v2rayNG_1.9.3_arm64-v8a.zip</span></a></p><h2 id='二新建订阅分组'><span>二、新建订阅分组</span></h2><h3 id='1订阅链接'><span>1.订阅链接</span></h3><ul><li><p><strong><span>高速节点订阅链接</span></strong></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="jsx"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="jsx"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.09895px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">https</span>:<span class="cm-comment">//dlink.host/sharepoint/aHR0cHM6Ly9vYm91ci1teS5zaGFyZXBvaW50LmNvbS86dDovZy9wZXJzb25hbC9kcl9uYXNoYWF0X29pX2VkdV9lZy9FU1ZJS1hzWThWaElqU3Zzc1pIN0lyd0JISUlHZWxPUThqMFZqa05nanpJN053P2U9UWNGNm1a</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 45px;"></div><div class="CodeMirror-gutters" style="display: none; height: 45px;"></div></div></div></pre><h2 id='鼠标右键复制这个链接不要点击'><a href='https://dlink.host/sharepoint/aHR0cHM6Ly9vYm91ci1teS5zaGFyZXBvaW50LmNvbS86dDovZy9wZXJzb25hbC9kcl9uYXNoYWF0X29pX2VkdV9lZy9FU1ZJS1hzWThWaElqU3Zzc1pIN0lyd0JISUlHZWxPUThqMFZqa05nanpJN053P2U9UWNGNm1a'><strong><span>鼠标右键复制这个链接不要点击</span></strong></a></h2></li></ul><h3 id='2新建一个分组别名随便取复制上面的订阅链接点击确定'><span>2.新建一个分组，别名随便取，复制上面的订阅链接，点击</span><code>确定</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587.png" referrerpolicy="no-referrer"></p><h2 id='三订阅'><span>三、订阅</span></h2><h3 id='1选中刚才的分组点击订阅分组选择更新当前订阅不通过代理'><span>1.选中刚才的分组，点击</span><code>订阅分组</code><span>，选择</span><code>更新当前订阅（不通过代理）</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%201.png" referrerpolicy="no-referrer"></p><h3 id='2订阅成功就会出现很多节点'><span>2.订阅成功就会出现很多节点</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%202.png" referrerpolicy="no-referrer"></p><h2 id='四测延迟'><span>四、测延迟</span></h2><h3 id='1ctrl+a全选右键选择测试服务器真链接延迟多选'><span>1.Ctrl+A全选，右键选择</span><code>测试服务器真链接延迟（多选）</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%203.png" referrerpolicy="no-referrer"></p><h3 id='2可以看到出现了延迟只要有延迟就说明节点能用'><span>2.可以看到出现了延迟，只要有延迟就说明节点能用</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%204.png" referrerpolicy="no-referrer"></p><h2 id='五测速'><span>五。测速</span></h2><h3 id='1替换测速链接如下选择设置点击参数设置'><span>1.替换测速链接如下，选择</span><code>设置</code><span>，点击</span><code>参数设置</code></h3><p>&nbsp;</p><p><span>测速链接</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="jsx"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="jsx"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.19792px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">https</span>:<span class="cm-comment">//lg-singapore.cloudzy.com/50MB.test</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p>&nbsp;</p><p><img src="%25E5%259B%25BE%25E7%2589%2587%205.png" referrerpolicy="no-referrer"></p><h3 id='2选择v2ray设置拖到最下面的测速文件地址将测速文件地址替换成上面的测速链接'><span>2.选择</span><code>v2ray设置</code><span>，拖到最下面的</span><code>测速文件地址</code><span>，将测速文件地址替换成上面的测速链接</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%206.png" referrerpolicy="no-referrer"></p><h3 id='3测速其实不用测试速度也可以这是我都是优选过的域名速度不会太慢而且测速会很耗费时间所以不推荐测速我就只测延迟排行最低的三个'><span>3.测速，其实不用测试速度也可以，这是我都是优选过的域名，速度不会太慢，而且测速会很耗费时间，所以不推荐测速，我就只测延迟排行最低的三个</span></h3><h3 id='4我们点击这个延迟按钮它就会自动排序要么从低到高要么从高到低我们选择从低到高排序'><span>4.我们点击这个</span><code>延迟</code><span>按钮，它就会自动排序，要么从低到高，要么从高到低，我们选择从低到高排序</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%207.png" referrerpolicy="no-referrer"></p><h3 id='5开始测速前三个用鼠标选择前三个节点右键选择测试服务器速度多选'><span>5.开始测速前三个，用鼠标选择前三个节点，右键选择</span><code>测试服务器速度（多选）</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%208.png" referrerpolicy="no-referrer"></p><h3 id='6测速完成后可以看到速度非常的快一般5mb左右就能够看youtube1080p画质不卡了'><span>6.测速完成后，可以看到速度非常的快，一般5MB左右就能够看Youtube1080P画质不卡了</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%209.png" referrerpolicy="no-referrer"></p><h2 id='六选择服务器'><span>六、选择服务器</span></h2><h3 id='1我们选择最快的节点第二个右键选择设为活动服务器'><span>1.我们选择最快的节点第二个，右键选择</span><code>设为活动服务器</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2010.png" referrerpolicy="no-referrer"></p><h3 id='2看到左下角有个系统代理当前还没有配置系统代理'><span>2.看到左下角有个</span><code>系统代理</code><span>，当前还没有配置系统代理</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2011.png" referrerpolicy="no-referrer"></p><h3 id='3我们选择自动配置系统代理'><span>3.我们选择</span><code>自动配置系统代理</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2012.png" referrerpolicy="no-referrer"></p><h3 id='4右边的路由一般选择v3绕过大陆选择v3全局也可以主要区别就是v3绕过大陆就会使得国内的网站比如bilibili使用你自己的公网二访问国外网站例如youtube就会使用代理访问而v3全局就是所有的网站都使用代理访问这就会导致本来国内的bilibili打开挺快的结果代理后打开访问速度还变慢了而且流量消耗也会比v3绕过大陆模式多的多所以我们一般使用v3绕过大陆模式除非有些网站审核特别严格你不开全局访问不了这时打开v3全局模式也不迟'><span>4.右边的路由一</span><strong><span>般选择</span><code>V3绕过大陆</code></strong><span>，选择</span><code>V3全局</code><span>也可以，主要区别就是</span><code>V3绕过大陆</code><span>就会使得国内的网站比如bilibili使用你自己的公网，二访问国外网站例如Youtube就会使用代理访问，而</span><code>V3全局</code><span>就是所有的网站都使用代理访问，这就会导致本来国内的bilibili打开挺快的，结果代理后打开访问速度还变慢了，而且流量消耗也会比</span><code>V3绕过大陆</code><span>模式多的多。所以我们</span><strong><span>一般使用</span><code>V3绕过大陆</code><span>模式</span></strong><span>，除非有些网站审核特别严格，你不开全局访问不了，这时打开</span><code>V3全局</code><span>模式也不迟</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2013.png" referrerpolicy="no-referrer"></p><h3 id='5设置好后配置如下橙色代表我选择的就是这个节点'><span>5.设置好后配置如下，橙色代表我选择的就是这个节点</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2014.png" referrerpolicy="no-referrer"></p><h2 id='七打开youtube看看效果'><span>七、打开youtube看看效果</span></h2><h3 id='1我们可以看到4k画质视频的速度最高可以到11万可以说4k没压力速度嘎嘎快'><span>1.我们可以看到4K画质视频的速度最高可以到11万，可以说4k没压力，速度嘎嘎快</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2015.png" referrerpolicy="no-referrer"></p><h3 id='2我就看了几十秒就已经用了397mb流量可以看出速度真的很快'><span>2.我就看了几十秒，就已经用了397MB流量，可以看出速度真的很快</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2016.png" referrerpolicy="no-referrer"></p><h2 id='八当节点失效时如何更换优选域名'><span>八、当节点失效时如何更换优选域名</span></h2><h3 id='1通常来说因为这些都是优选域名除非大佬不维护了否则应该一直有效就算失效了我们也可以自己替换优选节点'><span>1.通常来说因为这些都是优选域名，除非大佬不维护了，否则应该一直有效，就算失效了，我们也可以自己替换优选节点</span></h3><h3 id='2下面是常用的优选节点'><span>2.下面是常用的优选节点</span></h3><ul><li><p><strong><span>常用优选域名</span></strong></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="jsx" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="jsx"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.19792px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Cloudflare</span> <span class="cm-variable">支持的</span> <span class="cm-variable">HTTP</span> <span class="cm-variable">端口：</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">80</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">8080</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">8880</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2052</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2082</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2086</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2095</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Cloudflare</span> <span class="cm-variable">支持的</span> <span class="cm-variable">HTTPS</span> <span class="cm-variable">端口：</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">443</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2053</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2083</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2087</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">2096</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">-</span> <span class="cm-number">8443</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">115155.</span><span class="cm-variable">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-number">8.889288</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">acjp2</span>.<span class="cm-property">cloudflarest</span>.<span class="cm-property">link</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">acsg</span>.<span class="cm-property">cloudflarest</span>.<span class="cm-property">link</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">acsg3</span>.<span class="cm-property">cloudflarest</span>.<span class="cm-property">link</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">alejandracaiccedo</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">aliyun</span><span class="cm-number">.2096</span>.<span class="cm-property">us</span>.<span class="cm-property">kg</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">anycast</span>.<span class="cm-property">argun</span>.<span class="cm-property">rr</span>.<span class="cm-property">nu</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdn</span><span class="cm-operator">-</span><span class="cm-variable">all</span>.<span class="cm-property">xn</span><span class="cm-operator">--</span><span class="cm-variable">b6gac</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdn</span><span class="cm-operator">-</span><span class="cm-variable">b100</span>.<span class="cm-property">xn</span><span class="cm-operator">--</span><span class="cm-variable">b6gac</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdn</span><span class="cm-number">.2020111</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdn</span>.<span class="cm-property">anycast</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdn</span>.<span class="cm-property">tzpro</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span><span class="cm-operator">-</span><span class="cm-variable">cname</span>.<span class="cm-property">xingpingcn</span>.<span class="cm-property">top</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span><span class="cm-number">.090227</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span><span class="cm-number">.0</span><span class="cm-variable">sm</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span><span class="cm-number">.877771</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span>.<span class="cm-property">cdn</span>.<span class="cm-property">bingbook</span>.<span class="cm-property">cn</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span>.<span class="cm-property">zerone</span><span class="cm-operator">-</span><span class="cm-variable">cdn</span>.<span class="cm-property">pp</span>.<span class="cm-property">ua</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cf</span>.<span class="cm-property">zhetengsha</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cfip</span><span class="cm-number">.1323123</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cfip</span>.<span class="cm-property">cfcdn</span>.<span class="cm-property">vip</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cfip</span>.<span class="cm-property">xxxxxxxx</span>.<span class="cm-property">tk</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cdnjs</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cloudflare</span><span class="cm-operator">-</span><span class="cm-variable">ip</span>.<span class="cm-property">mofashi</span>.<span class="cm-property">ltd</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cloudflare</span><span class="cm-number">.9</span><span class="cm-variable">jy</span>.<span class="cm-property">cc</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cname</span>.<span class="cm-property">xirancdn</span>.<span class="cm-property">us</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">cnamefuckxxs</span>.<span class="cm-property">yuchen</span>.<span class="cm-property">icu</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">comicabc</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">creativecommons</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">dnschecker</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">download</span>.<span class="cm-property">yunzhongzhuan</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">edgetunnel</span><span class="cm-operator">-</span><span class="cm-variable">dgp</span>.<span class="cm-property">pages</span>.<span class="cm-property">dev</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">edgetunnel</span>.<span class="cm-property">anycast</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">f3058171cad</span><span class="cm-number">.002404</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">fbi</span>.<span class="cm-property">gov</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">gamer</span>.<span class="cm-property">com</span>.<span class="cm-property">tw</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">gur</span>.<span class="cm-property">gov</span>.<span class="cm-property">ua</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">icook</span>.<span class="cm-property">hk</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">icook</span>.<span class="cm-property">tw</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">ip</span>.<span class="cm-property">sb</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">iplocation</span>.<span class="cm-property">io</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">japan</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">log</span>.<span class="cm-property">bpminecraft</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">malaysia</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">nc</span>.<span class="cm-property">gocada</span>.<span class="cm-property">co</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">pixiv</span>.<span class="cm-property">net</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">russia</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">shopify</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">silkbook</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">singapore</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">skk</span>.<span class="cm-property">moe</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">sky</span>.<span class="cm-property">rethinkdns</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">speed</span>.<span class="cm-property">marisalnc</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">steamdb</span>.<span class="cm-property">info</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">tasteatlas</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">time</span>.<span class="cm-property">cloudflare</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">time</span>.<span class="cm-property">is</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">toy</span><span class="cm-operator">-</span><span class="cm-variable">people</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">vista</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">whatismyipaddress</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span><span class="cm-number">.4</span><span class="cm-variable">chan</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">baipiao</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">boba88slot</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">csgo</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">d</span><span class="cm-operator">-</span><span class="cm-number">555.</span><span class="cm-variable">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">digitalocean</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">gco</span>.<span class="cm-property">gov</span>.<span class="cm-property">qa</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">glassdoor</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">gov</span>.<span class="cm-property">se</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">gov</span>.<span class="cm-property">ua</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">hugedomains</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">iakeys</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">ipaddress</span>.<span class="cm-property">my</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">ipchicken</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">ipget</span>.<span class="cm-property">net</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">iplocation</span>.<span class="cm-property">net</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">novipnoad</span>.<span class="cm-property">net</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">okcupid</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">pcmag</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">rxhomeo</span>.<span class="cm-property">in</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">sean</span><span class="cm-operator">-</span><span class="cm-variable">now</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">shopify</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">udacity</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">udemy</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visa</span>.<span class="cm-property">co</span>.<span class="cm-property">jp</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visa</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visa</span>.<span class="cm-property">com</span>.<span class="cm-property">hk</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visa</span>.<span class="cm-property">com</span>.<span class="cm-property">sg</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visa</span>.<span class="cm-property">com</span>.<span class="cm-property">tw</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">visakorea</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">whatismyip</span>.<span class="cm-property">com</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">who</span>.<span class="cm-property">int</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">whoer</span>.<span class="cm-property">net</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">wto</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">www</span>.<span class="cm-property">zsu</span>.<span class="cm-property">gov</span>.<span class="cm-property">ua</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">workers</span>.<span class="cm-property">cloudflare</span>.<span class="cm-property">cyou</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">xn</span><span class="cm-operator">--</span><span class="cm-variable">b6gac</span>.<span class="cm-property">eu</span>.<span class="cm-property">org</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">zula</span>.<span class="cm-property">ir</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-operator">*</span>.<span class="cm-variable">cloudflare</span><span class="cm-number">.182682</span>.<span class="cm-property">xyz</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 2643px;"></div><div class="CodeMirror-gutters" style="display: none; height: 2643px;"></div></div></div></pre></li></ul><h3 id='3替换流程选择一个优选节点'><span>3.替换流程，选择一个优选节点</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2017.png" referrerpolicy="no-referrer"></p><h3 id='4在刚才的节点中选择一个节点双击可以看到这个地址就是我们的优选域名或者优选ip的地方我们只需要经这个域名替换成别的域名就行了比如我替换成wwwvisacomsg'><span>4.在刚才的节点中选择一个节点双击，可以看到这个地址就是我们的优选域名或者优选ip的地方，我们只需要经这个域名替换成别的域名就行了，比如，我替换成</span><code>www.visa.com.sg</code></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2018.png" referrerpolicy="no-referrer"></p><h3 id='5替换完成结果如下点击确定'><span>5.替换完成结果如下，点击确定</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2019.png" referrerpolicy="no-referrer"></p><h3 id='6此时就可以发现节点的优选域名已经被替换了'><span>6.此时就可以发现节点的优选域名已经被替换了</span></h3><p><img src="%25E5%259B%25BE%25E7%2589%2587%2020.png" referrerpolicy="no-referrer"></p><h3 id='7这样只要这个wwwvisacomsg-优选域名不失效那么你就又可以继续用了'><span>7.这样只要这个</span><code>www.visa.com.sg</code><span> 优选域名不失效，那么你就又可以继续用了</span></h3><h2 id='九注意事项'><span>九、注意事项</span></h2><p>&nbsp;</p><p><strong><span>注意事项</span></strong></p><p><strong><span>1.网站打不开</span></strong><span>：可能有的节点不太干净或者网站风控严格，这个节点可能打不开某个网站，但是你切换节点后打得开这是完全有可能的，所以节点不行就换，别一个节点用到死，灵活操作。</span></p><p><strong><span>2.晚上网速慢</span></strong><span>：晚高峰时期，美国的人也在上网，就会造成网络堵塞，网速慢等问题，晚上很卡，这是很正常的现象，明天早上你就会发现网速就会变快。</span></p><p><strong><span>3.被封号</span></strong><span>：如果是某些风控严格的账号建议不要使用这些节点，因为频繁跳ip会导致封号，例如facebook，ins，twitter，chatgpt，telegram，whatsapp，google这些，不是说不能用啊，就是会有封号的风险，自行承担。而那些风控不严格的网站，比如youtube等就可以随便看，哪个节点快就用哪个，看得爽就行。</span></p><p><strong><span>4.不推荐频繁测速</span></strong><span>：测过一次知道大概的速度就行了，测速也是需要流量的，频繁测速会导致流量耗尽，你还没看呢，流量就被测速刷完了，看鸡毛。</span></p><p>&nbsp;</p><h2 id='十免责声明'><span>十、免责声明</span></h2><p>&nbsp;</p><p><strong><span>免责声明</span></strong></p><p><strong><span>本教程仅供学习交流之用，严禁用于任何商业或非法目的。</span></strong><span> 作者不对因使用本教程产生的任何直接或间接损失、损害或法律纠纷承担责任。</span></p><p><strong><span>重要声明：</span></strong></p><ul><li><p><strong><span>版权归属：</span></strong><span> 本教程中涉及的任何版权、商标等知识产权均归原作者或相关权利人所有。</span></p></li><li><p><strong><span>风险提示：</span></strong></p><ul><li><p><strong><span>技术风险：</span></strong><span> 使用本教程中的技术可能导致数据丢失、系统故障等问题。</span></p></li><li><p><strong><span>法律风险：</span></strong><span> 未经授权使用本教程中的技术可能违反相关法律法规。</span></p></li><li><p><strong><span>安全风险：</span></strong><span> 部分教程可能涉及到系统安全问题，请谨慎操作。</span></p></li></ul></li><li><p><strong><span>独立判断：</span></strong><span> 读者应自行判断本教程内容的准确性、完整性，并自行承担使用风险。</span></p></li><li><p><strong><span>更新与修改：</span></strong><span> 本教程内容可能随时更新或修改，恕不另行通知。</span></p></li></ul><p><strong><span>免责条款：</span></strong></p><p><strong><span>作者对本教程中的任何错误、遗漏或不准确之处不承担任何责任</span></strong><span>。读者应自行核实相关信息，并参考官方文档。</span></p><p><strong><span>禁止行为：</span></strong></p><ul><li><p><strong><span>商业用途：</span></strong><span> 未经授权，严禁将本教程用于任何商业目的。</span></p></li><li><p><strong><span>非法活动：</span></strong><span> 严禁将本教程用于任何非法活动，包括但不限于破解、入侵、盗窃等。</span></p></li><li><p><strong><span>传播虚假信息：</span></strong><span> 严禁传播与本教程内容无关或虚假的言论。</span></p></li></ul><p><strong><span>注意事项：</span></strong></p><ul><li><p><strong><span>适用范围：</span></strong><span> 本免责声明适用于本教程的所有内容，包括但不限于文字、图片、视频等。</span></p></li><li><p><strong><span>法律咨询：</span></strong><span> 如需获取专业法律意见，请咨询律师。</span></p></li></ul><p><strong><span>再次强调： 本教程仅供个人学习研究之用，请勿将本教程中的任何内容用于任何非法或未经授权的活动。</span></strong></p><p>&nbsp;</p><p><span>Copyright © 2024 lovechina2024. All rights reserved.</span></p></div></div>
+</body>
+</html>
